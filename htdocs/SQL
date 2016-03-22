@@ -22,3 +22,11 @@ WHERE SID = XXXXXXX;
 To delete info:
 DELETE FROM students
 WHERE SID = XXXXXXX;
+
+
+CORE FUNCTION 2: Check the academic performance of a student
+To check academic performance of a student:
+SELECT c.CID, c.name, e.yearID, e.semesterID, e.grade
+FROM enrollment e, courses c
+WHERE e.SID = 1010110 AND c.CID = e.CID
+ORDER BY e.yearID, e.semesterID ASC;
