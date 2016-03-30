@@ -1,0 +1,3 @@
+1234567 ewew 2 qweqwe eqwew qweweqweq
+INSERT INTO `students` (`SID`, `name`, `IID`, `major`, `degreeHeld`, `career`) VALUES
+        (1234567, 'ewew',2, 'qweqwe', 'eqwew', 'qweweqweq')

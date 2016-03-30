@@ -1,0 +1,3 @@
+7654321 ewwe 1 ee wqeqw qweqw
+INSERT INTO `students` (`SID`, `name`, `IID`, `major`, `degreeHeld`, `career`) VALUES
+        (7654321, 'ewwe',1, 'ee', 'wqeqw', 'qweqw')
