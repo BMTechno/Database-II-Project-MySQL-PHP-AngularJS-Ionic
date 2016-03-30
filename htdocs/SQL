@@ -1,0 +1,32 @@
+CORE FUNCTION 1: Create, view, update and delete student information 
+
+Functions for students info table
+
+To insert student info:
+INSERT INTO `students` (`SID`, `name`, `IID`, `major`, `degreeHeld`, `career`) VALUES
+(200000, 'William', 1, 'cs', 'bachelor', 'graduate');
+
+To view one student info:
+SELECT * from students 
+WHERE SID = XXXXXXX;
+
+To view all student info in ascending order:
+SELECT * from students
+ORDER BY SID ASC;
+
+To update info:
+UPDATE students
+SET IID = X, major = ‘xxxxx’ 
+WHERE SID = XXXXXXX;
+
+To delete info:
+DELETE FROM students
+WHERE SID = XXXXXXX;
+
+
+CORE FUNCTION 2: Check the academic performance of a student
+To check academic performance of a student:
+SELECT c.CID, c.name, e.yearID, e.semesterID, e.grade
+FROM enrollment e, courses c
+WHERE e.SID = 1010110 AND c.CID = e.CID
+ORDER BY e.yearID, e.semesterID ASC;
