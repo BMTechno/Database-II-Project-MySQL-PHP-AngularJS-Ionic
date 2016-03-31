@@ -5,11 +5,12 @@ angular.module('ionicApp').controller('updateController', function($scope, $http
 
 
     $scope.updateStudent = function(){
-        $http.post("update_student.php",
+        $http.post("CRUD/update_student/update_student.php",
             {
-                'SID':$scope.SID, 'name':$scope.name,
-                'IID':$scope.IID, 'major':$scope.major,
-                'degreeHeld':$scope.degreeHeld, 'career':$scope.career})
+                'SID':$scope.SID,
+                'IID':$scope.IID,
+                'major':$scope.major
+                })
             .success(function(data){
                 console.log("Data updated successfully");
         });

@@ -11,12 +11,13 @@
     <link href="lib/ionic-v1.2.4/css/ionic.css" rel="stylesheet">
     <script src="lib/ionic-v1.2.4/js/ionic.bundle.min.js"></script>
 
-
     <!--App Scripts-->
     <link rel="stylesheet" type="text/css" href="css/table.css">
     <script type="text/javascript" src="routes.js"></script>
     <script type="text/javascript" src="CRUD/student/controller.js"></script>
     <script type="text/javascript" src="CRUD/insert_student/insertController.js"></script>
+    <script type="text/javascript" src="CRUD/update_student/updateController.js"></script>
+    <script type="text/javascript" src="CRUD/delete_student/deleteController.js"></script>
 
   </head>
 

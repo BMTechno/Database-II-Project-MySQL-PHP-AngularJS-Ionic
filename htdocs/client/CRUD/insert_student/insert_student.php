@@ -11,7 +11,7 @@ $dataObject = json_decode($postData);
 $servername = "localhost";
 $username = "Thomas";
 $password = "123456";
-$dbname = "new_DII";
+$dbname = "DB_II";
 
 // Create connection
 $conn = mysql_connect($servername, $username, $password);

@@ -25,6 +25,22 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
+    .state('tabs.update-student', {
+      url: "/update-student",
+      views: {
+        'home-tab': {
+          templateUrl: "ionic-nav-tabs/update_student.html"
+        }
+      }
+    })
+    .state('tabs.delete-student',{
+      url:'/delete-student',
+      views:{
+        'home-tab':{
+          templateUrl: 'ionic-nav-tabs/delete_student.html'
+        }
+      }
+    })
     .state('tabs.facts2', {
       url: "/facts2",
       views: {

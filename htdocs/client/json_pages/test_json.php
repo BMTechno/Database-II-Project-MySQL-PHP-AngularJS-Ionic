@@ -2,19 +2,19 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-$conn = new mysqli("localhost", "Thomas", "123456", "new_DII");
+$conn = new mysqli("localhost", "Thomas", "123456", "DB_II");
 
-$result = $conn->query("SELECT CID, name, credits, groupID
-                        FROM courses");
+$result = $conn->query("SELECT * from students");
 
 $outp = "";
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     if ($outp != "") {$outp .= ",";}
-    $outp .= '{"CID":"'  . $rs["CID"] . '",';
-    $outp .= '"name":"'   . $rs["name"]        . '",';
-    $outp .= '"credits":"'. $rs["credits"]     . '",';
-    $outp .= '"groupID":"'. $rs["groupID"]     . '"}';
-
+    $outp .= '{"SID":"'         . $rs["SID"]        . '",';
+    $outp .= '"name":"'         . $rs["name"]       . '",';
+    $outp .= '"IID":"'          . $rs["IID"]        . '",';
+    $outp .= '"major":"'        . $rs["major"]      . '",';
+    $outp .= '"degreeHeld":"'   . $rs["degreeHeld"] . '",';
+    $outp .= '"career":"'       . $rs["career"]     . '"}';
 }
 $outp ='{"records":['.$outp.']}';
 $conn->close();

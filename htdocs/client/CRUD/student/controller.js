@@ -1,8 +1,15 @@
 angular.module('ionicApp').controller('studentController', function($scope, $http) {
-    $http.get("http://localhost/json_pages/test_json.php")
+    
+    $http.get("http://localhost/client/json_pages/test_json.php")
         .then(function (response) {
-        	$scope.model_object = response.data.records;
-        });
+            $scope.model_object = response.data.records;
+
+            console.log("  trying to refresh model  ");
+        })
+
+
+
+
 });
 
 /*
