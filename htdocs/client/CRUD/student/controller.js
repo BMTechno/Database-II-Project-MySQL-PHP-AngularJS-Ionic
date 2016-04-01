@@ -1,11 +1,21 @@
 angular.module('ionicApp').controller('studentController', function($scope, $http) {
-    
+
     $http.get("http://localhost/client/json_pages/test_json.php")
         .then(function (response) {
             $scope.model_object = response.data.records;
+        });
 
-            console.log("  trying to refresh model  ");
-        })
+    //setTimeout(function () {
+    //    $scope.$apply(function () {
+    //        $http.get("http://localhost/client/json_pages/test_json.php")
+    //            .then(function (response) {
+    //                $scope.model_object = response.data.records;
+    //                console.log("  trying to refresh model  ");
+    //            });
+    //    });
+    //}, 2000);
+
+
 
 
 
