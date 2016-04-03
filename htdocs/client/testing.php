@@ -19,6 +19,8 @@
     <script type="text/javascript" src="CRUD/update_student/updateController.js"></script>
     <script type="text/javascript" src="CRUD/delete_student/deleteController.js"></script>
 
+    <script type="text/javascript" src="student-academic-performances/average_gpa/avgGPACtrl.js"></script>
+
   </head>
 
   <body>
@@ -50,12 +52,30 @@
     <script id="templates/about.html" type="text/ng-template">
       <ion-view view-title="About">
         <ion-content class="padding">
-          <h3>Create hybrid mobile apps with the web technologies you love.</h3>
-          <p>Free and open source, Ionic offers a library of mobile-optimized HTML, CSS and JS components for building highly interactive apps.</p>
-          <p>Built with Sass and optimized for AngularJS.</p>
-          <p>
-            <a class="button icon icon-right ion-chevron-right" href="#/tab/navstack">Tabs Nav Stack</a>
-          </p>
+
+            <div ng-controller="studentAcademicController">
+                <form method="post">
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" ng-model="SID" placeholder="SID">
+                        </label>
+                    </div>
+
+                    <div class="padding">
+                        <input class="button button-block button-positive activated" value="submit" ng-click="getGPA()"/>
+                    </div>
+                </form>
+
+                <p>
+                    Testing
+                </p>
+                <div ng-repeat="x in SID_and_GPA">
+                    <p>{{x.SID }}</P>
+                    <p>{{x.GPA}}</P>
+                </div>
+
+            </div>
+
         </ion-content>
       </ion-view>
     </script>

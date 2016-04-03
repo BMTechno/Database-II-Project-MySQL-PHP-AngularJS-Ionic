@@ -14,7 +14,6 @@ angular.module('ionicApp').controller('updateController', function($scope, $http
             .success(function(data){
                 console.log("Data updated successfully");
         });
-
     }
 
 

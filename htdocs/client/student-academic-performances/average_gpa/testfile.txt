@@ -1,0 +1,4 @@
+SELECT grade FROM enrollment WHERE SID = 1010101
+UPDATE students
+        SET GPA = 3.5454545454545
+        WHERE SID = 1010101 

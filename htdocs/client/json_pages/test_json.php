@@ -14,7 +14,8 @@ while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     $outp .= '"IID":"'          . $rs["IID"]        . '",';
     $outp .= '"major":"'        . $rs["major"]      . '",';
     $outp .= '"degreeHeld":"'   . $rs["degreeHeld"] . '",';
-    $outp .= '"career":"'       . $rs["career"]     . '"}';
+    $outp .= '"career":"'       . $rs["career"]     . '",';
+    $outp .= '"GPA":"'          . $rs["GPA"]        . '"}';
 }
 $outp ='{"records":['.$outp.']}';
 $conn->close();
