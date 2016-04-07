@@ -3,7 +3,7 @@
     Author: Son Nguyen && Vivien Chow
     Description: This file update student.
     Last Working Date: April-07-2016
-    File: test_json.php
+    File: update_student.php
 */
 
 $postData = file_get_contents("php://input");

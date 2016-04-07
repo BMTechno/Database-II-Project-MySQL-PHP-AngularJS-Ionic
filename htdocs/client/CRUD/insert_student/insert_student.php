@@ -3,7 +3,7 @@
     Author: Son Nguyen && Vivien Chow
     Description: This file insert new student.
     Last Working Date: April-07-2016
-    File: test_json.php
+    File: insert_json.php
 */
 
 

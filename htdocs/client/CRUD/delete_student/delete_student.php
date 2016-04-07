@@ -3,7 +3,7 @@
     Author: Son Nguyen && Vivien Chow
     Description: This file delete student.
     Last Working Date: April-07-2016
-    File: test_json.php
+    File: delete_student.php
 */
 
 $postData = file_get_contents("php://input");
