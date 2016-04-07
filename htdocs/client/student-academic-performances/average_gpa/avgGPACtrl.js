@@ -14,7 +14,7 @@ angular.module('ionicApp').controller('studentAcademicController', function($sco
     $scope.getGPA = function(){
         console.log($scope.SID);
 
-        $http.post("student-academic-performances/average_gpa/post_SID_to_get_average_gpa.php",
+        $http.post("student-academic-performances/average_gpa/post_SID_to_get_student_status.php",
             {
                 'SID':$scope.SID
             })

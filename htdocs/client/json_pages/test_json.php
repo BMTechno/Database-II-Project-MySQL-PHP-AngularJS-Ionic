@@ -1,9 +1,15 @@
 <?php
+
+/*
+    Author: Son Nguyen && Vivien Chow
+    Description: This file echo out a jSON object student graduation status.
+    Last Working Date: April-07-2016
+    File: test_json.php
+*/
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
 $conn = new mysqli("localhost", "Thomas", "123456", "DB_II");
-
 $result = $conn->query("SELECT * from students");
 
 $outp = "";
