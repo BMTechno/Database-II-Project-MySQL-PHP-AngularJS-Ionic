@@ -1,11 +1,11 @@
-SELECT COUNT(grade) FROM enrollment WHERE SID = 1010110 and CID >= 915000/n10/n30/nUPDATE students
-        SET GPA = 3.84 , cumulative_credit = 30
-        WHERE SID = 1010110 /n
+SELECT COUNT(grade) FROM enrollment WHERE SID = 1010103 and CID >= 915000/n10/n30/nUPDATE students
+        SET GPA = 2.9 , cumulative_credit = 30
+        WHERE SID = 1010103 /n
                     UPDATE students
                     SET core_courses_credits = 12
-                    WHERE SID = 1010110 /n
+                    WHERE SID = 1010103 /n
                     SELECT COUNT(grade)
                     FROM enrollment
-                    WHERE SID = 1010110 AND CID >= 915000/n10/nUPDATE students
+                    WHERE SID = 1010103 AND CID >= 915000/n10/nUPDATE students
                     SET elective_courses_credits = 18
-                    WHERE SID = 1010110/n   array1l   10         array1l   0         array1   915000         array2            array1            array2            first   0          secon  0      Reason: 
+                    WHERE SID = 1010103/n   array1l   12         array1l   2         array1   911020         array2   915800         array1   911020         array2   914040         first   2          secon  2      Reason: 

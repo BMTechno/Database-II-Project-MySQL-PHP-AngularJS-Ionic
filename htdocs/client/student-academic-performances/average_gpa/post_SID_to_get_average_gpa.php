@@ -438,10 +438,18 @@ while ($row = mysql_fetch_array($result)){
 
 fwrite($myfile, 'Reason:'. $reason);
 
-$sql = "UPDATE students
-        SET reason = '$reason'
-        WHERE SID = $SID";
-mysql_query($sql);
+if($reason == " "){
+    $sql = "UPDATE students
+            SET reason = 'Passing Status'
+            WHERE SID = $SID";
+    mysql_query($sql);
+}else{
+    $sql = "UPDATE students
+            SET reason = '$reason'
+            WHERE SID = $SID";
+    mysql_query($sql);
+}
+
 
 mysql_close($conn);
 fclose($myfile);

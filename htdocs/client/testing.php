@@ -65,14 +65,15 @@
                         <input class="button button-block button-positive activated" value="submit" ng-click="getGPA()"/>
                     </div>
                 </form>
-
                 <p>
                     Testing
                 </p>
                 <div ng-repeat="x in SID_and_GPA">
-                    <p>{{x.SID }}</P>
-                    <p>{{x.GPA}}</P>
-                    <p>{{x.cumulative_credit}}</p>
+                    <p>Student ID: {{x.SID }}</P>
+                    <p>GPA: {{x.GPA}}</P>
+                    <p>Total Credits: {{x.cumulative_credit}}</p>
+                    <p>Academic Status: {{x.passing_status}}</p>
+                    <p>Reason: {{x.reason}}</p>
                 </div>
 
             </div>
