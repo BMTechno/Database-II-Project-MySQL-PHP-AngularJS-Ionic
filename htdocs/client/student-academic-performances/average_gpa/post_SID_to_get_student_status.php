@@ -345,6 +345,17 @@ $result = mysql_query($sql) or die(mysql_error());
 $reason = " ";
 while ($row = mysql_fetch_array($result)){
 
+    if($row["GPA"] < 3.0){
+            $passing_status = 0;
+            $sql = "UPDATE students
+                   SET passing_status = 'Not Passing'
+                   WHERE SID = $SID";
+            mysql_query($sql);
+
+            $reason =  $reason . "GPA Less than 3.0";
+        }
+
+
     if($row["cumulative_credit"] < 30){
         $passing_status = 0;
         $sql = "UPDATE students
