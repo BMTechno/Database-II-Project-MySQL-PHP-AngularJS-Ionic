@@ -2,7 +2,7 @@
 /**************************************************
 
 Author: Son Nguyen && Vivien Chow
-Description: PHP & MySQL backend to update and explian
+Description: PHP & MySQL backend to update and explain
              student passing status.
 Last Working Date: April-07-2016
 File: post_SID_to_get_student_status
