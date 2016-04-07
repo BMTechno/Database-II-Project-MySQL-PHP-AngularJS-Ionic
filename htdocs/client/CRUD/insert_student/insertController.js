@@ -3,7 +3,7 @@
  */
 angular.module('ionicApp').controller('insertController', function($scope, $http) {
 
-    $scope.updateStudent = function(){
+    $scope.insertStudent = function(){
         $http.post("CRUD/insert_student/insert_student.php",
             {
                 'SID':$scope.SID, 'name':$scope.name,

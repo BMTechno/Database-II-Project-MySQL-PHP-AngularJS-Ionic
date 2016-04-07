@@ -18,7 +18,9 @@ angular.module('ionicApp').controller('studentAcademicController', function($sco
                     for (var i = 0; i < $scope.model_object.length; i++) {
                         console.log($scope.model_object[i]);
                         if($scope.model_object[i].SID == $scope.SID){
-                            $scope.SID_and_GPA = [{'SID':$scope.model_object[i].SID, 'GPA':$scope.model_object[i].GPA}];
+                            $scope.SID_and_GPA = [{'SID':$scope.model_object[i].SID,
+                                                   'GPA':$scope.model_object[i].GPA,
+                                                   'cumulative_credit':$scope.model_object[i].cumulative_credit}];
                             break;
                         }
                     }

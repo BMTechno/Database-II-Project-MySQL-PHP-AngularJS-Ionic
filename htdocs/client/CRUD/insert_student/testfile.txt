@@ -1,3 +1,3 @@
-1234567 w 1 ewqeqwe eqweqw eqweqwe
+7777777 eqe 1 e23e23 3e23e wwerwer
 INSERT INTO `students` (`SID`, `name`, `IID`, `major`, `degreeHeld`, `career`) VALUES
-        (1234567, 'w',1, 'ewqeqwe', 'eqweqw', 'eqweqwe')
+        (7777777, 'eqe',1, 'e23e23', '3e23e', 'wwerwer')

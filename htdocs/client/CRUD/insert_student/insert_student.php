@@ -1,10 +1,4 @@
 <?php
-
-//http://www.tutorialrepublic.com/php-tutorial/php-mysql-insert-query.php
-//http://www.w3schools.com/php/php_mysql_insert_lastid.asp
-
-//http://php.net/manual/en/tutorial.forms.php
-
 $postData = file_get_contents("php://input");
 $dataObject = json_decode($postData);
 

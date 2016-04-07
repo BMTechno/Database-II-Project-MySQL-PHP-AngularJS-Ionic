@@ -72,6 +72,7 @@
                 <div ng-repeat="x in SID_and_GPA">
                     <p>{{x.SID }}</P>
                     <p>{{x.GPA}}</P>
+                    <p>{{x.cumulative_credit}}</p>
                 </div>
 
             </div>

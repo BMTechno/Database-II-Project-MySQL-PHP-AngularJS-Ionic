@@ -19,8 +19,9 @@ if (!$conn) {
 
 mysql_select_db($dbname, $conn);
 
-$sql = "SELECT grade FROM enrollment WHERE SID = $SID";
+/* Calculating graduate GPA  */
 
+$sql = "SELECT grade FROM enrollment WHERE SID = $SID and CID >= 915000";
 $result = mysql_query($sql) or die(mysql_error());
 
 $counter = 0;
@@ -73,19 +74,375 @@ while($row = mysql_fetch_array($result)){
     }
 }
 
+/* End of calculating graduate GPA  */
+
 $myfile = fopen("testfile.txt", "w") or die("Unable to open file!");
-fwrite($myfile, $sql);
+
+
+/* Calculating cumulative credit taken */
+$sql = "SELECT COUNT(grade) FROM enrollment WHERE SID = $SID and CID >= 915000";
+fwrite($myfile, $sql .'/n');
+
+$result = mysql_query($sql) or die(mysql_error());
+$counting_classes_taken = mysql_fetch_row($result);
+
+fwrite($myfile, (string)$counting_classes_taken[0] .'/n');
+
+$cumulative_credit = (int)$counting_classes_taken[0] * 3;
+$cumulative_credit = (string)$cumulative_credit;
+
+fwrite($myfile, $cumulative_credit .'/n');
 
 $avg = $grade_point/$counter;
+
+/* End of Calculating cumulative credit taken */
+
+
+/* Update student profile */
 $sql = "UPDATE students
-        SET GPA = ".$avg."
+        SET GPA = ".$avg." , cumulative_credit = " . $cumulative_credit . "
         WHERE SID = $SID ";
 
 mysql_query($sql);
 
-fwrite($myfile, $outp ."\n");
-fwrite($myfile, $sql ."\n");
-fclose($myfile);
+/* End of Update student profile */
+
+//fwrite($myfile, $outp ."/n");
+fwrite($myfile, $sql ."/n");
+
+$sql = "SELECT CID FROM enrollment
+        WHERE  SID  = $SID AND CID = 915030";
+
+$result = mysql_query($sql) or die(mysql_error());
+$check_if_taken_algorithm = mysql_fetch_row($result);
+
+if(mysql_num_rows($result)== 0){
+   echo "Haven't take Algorithm yet";
+   $sql = "UPDATE students
+           SET algorithm = 'Have not taken algorithm', cumulative_credit = " . $cumulative_credit . "
+           WHERE SID = $SID ";
+   mysql_query($sql);
+
+   $sql = "Select c.CID, c.groupID
+           from enrollment e, courses c
+           where e.SID = $SID and c.CID = e.CID and e.CID>=915000";
+
+   $result = mysql_query($sql) or die(mysql_error());
+
+   /* Check if all core classes are taken */
+
+   $group2 = false;
+   $group3 = false;
+   $group4 = false;
+
+   while($row = mysql_fetch_array($result)){
+
+       if($row['groupID'] == 2){
+           $group2 = true;
+       }
+       else if($row['groupID'] == 3){
+           $group3 = true;
+       }
+       else if($row['groupID'] == 4){
+           $group4 = true;
+       }
+   }
+
+   $arr = array($group2, $group3, $group4);
+
+   $cc = 0;
+   foreach ($arr as &$value) {
+       if($value == true){
+          $cc++;
+       }
+   }
+
+   $cc = $cc * 3;
+
+   $elective = (int)$cumulative_credit - $cc;
+   $elective = (string)$elective;
+   $cc = (string)$cc;
+
+   $sql = "UPDATE students
+           SET core_courses_credits = $cc
+           WHERE SID = $SID ";
+
+   mysql_query($sql);
+
+
+   $sql = "UPDATE students
+           SET elective_courses_credits = $elective
+           WHERE SID = $SID ";
+
+   mysql_query($sql);
+
+}
+else{
+   echo "Algorithm taken";
+        $sql = "UPDATE students
+              SET algorithm = 'Algorithm taken', cumulative_credit = " . $cumulative_credit . "
+              WHERE SID = $SID ";
+        mysql_query($sql);
+
+        $sql = "Select c.CID, c.groupID
+                from enrollment e, courses c
+                where e.SID = $SID and c.CID = e.CID and e.CID>=915000";
+
+        $result = mysql_query($sql) or die(mysql_error());
+
+        /* Check if all core classes are taken */
+
+        $group2 = false;
+        $group3 = false;
+        $group4 = false;
+
+        while($row = mysql_fetch_array($result)){
+
+            if($row['groupID'] == 2){
+                $group2 = true;
+            }
+            else if($row['groupID'] == 3){
+                $group3 = true;
+            }
+            else if($row['groupID'] == 4){
+                $group4 = true;
+            }
+        }
+
+        /* Update if core courses are complete or incomplete and display elective credits*/
+        if($group2 && $group3 && $group4){
+            $sql = "
+                    UPDATE students
+                    SET core_courses_credits = 12
+                    WHERE SID = $SID ";
+            mysql_query($sql);
+
+            fwrite($myfile, $sql ."/n");
+
+            $sql = "
+                    SELECT COUNT(grade)
+                    FROM enrollment
+                    WHERE SID = $SID AND CID >= 915000";
+
+            fwrite($myfile, $sql ."/n");
+
+            $result = mysql_query($sql) or die(mysql_error());
+            $elective_courses = mysql_fetch_row($result);
+
+            fwrite($myfile, $elective_courses[0] ."/n");
+
+            $elective_courses_credits = ((int)$elective_courses[0] - 4) * 3;
+            $elective_courses_credits = (string)$elective_courses_credits;
+
+            $sql = "UPDATE students
+                    SET elective_courses_credits = $elective_courses_credits
+                    WHERE SID = $SID";
+
+            fwrite($myfile, $sql ."/n");
+
+            mysql_query($sql);
+        }
+        else{
+            $arr = array($group2, $group3, $group4);
+
+            $cc = 1;
+            foreach ($arr as &$value) {
+               if($value == true){
+                  $cc++;
+               }
+            }
+
+            $cc = $cc * 3;
+
+            $elective = (int)$cumulative_credit - $cc;
+            $elective = (string)$elective;
+            $cc = (string)$cc;
+
+            $sql = "UPDATE students
+                   SET core_courses_credits = $cc
+                   WHERE SID = $SID ";
+
+            mysql_query($sql);
+
+
+            $sql = "UPDATE students
+                   SET elective_courses_credits = $elective
+                   WHERE SID = $SID ";
+
+            mysql_query($sql);
+        }
+}
+
+
+$sql = "SELECT COUNT(grade) FROM enrollment WHERE SID = $SID AND grade > 'B+' AND CID >= 915000";
+$result = mysql_query($sql) or die(mysql_error());
+$grade_below_b = mysql_fetch_row($result);
+
+if( $grade_below_b[0] > 2){
+    $sql = "UPDATE students
+           SET grade_below_B = 0
+           WHERE SID = $SID ";
+    mysql_query($sql);
+}else{
+    $sql = "UPDATE students
+           SET grade_below_B = 1
+           WHERE SID = $SID ";
+    mysql_query($sql);
+}
+
+/* Check Enrollment and Condition Table */
+
+$sql1 = "SELECT CID
+        FROM enrollment
+        WHERE SID = $SID";
+
+$result1 = mysql_query($sql1) or die(mysql_error());
+$sql2 = " SELECT CID FROM conditions WHERE SID = $SID";
+
+$result2 = mysql_query($sql2) or die(mysql_error());
+$sql3 = " select count(CID) from conditions where SID = $SID";
+
+$result3 = mysql_query($sql3) or die(mysql_error());
+$temp = mysql_fetch_row($result3);
+
+$undergrad_class_flag = $temp[0];
+
+$array4 = array();
+$array5 = array();
+while ($row = mysql_fetch_array($result1)){
+    array_push($array4, $row["CID"]);
+}
+while ($row = mysql_fetch_array($result2)){
+    array_push($array5, $row["CID"]);
+}
+
+$array2 = mysql_fetch_array($result2);
+$array1length = count($array4);
+$array2length = count($array5);
+
+
+$array3em = $array4[0];
+$array4em = $array4[11];
+
+
+fwrite($myfile, '   array1l   '   . $array1length .    '      ' );
+fwrite($myfile, '   array1l   '   . $array2length .    '      ' );
+
+
+fwrite($myfile, '   array1   '   . (string)$array3em .    '      ' );
+fwrite($myfile, '   array2   '   . (string)$array4em .    '      ' );
+
+
+fwrite($myfile, '   array1   '   . (string)$array5[0] .    '      ' );
+fwrite($myfile, '   array2   '   . (string)$array5[1] .    '      ' );
+
+fwrite($myfile, '   first   '   . (string)$undergrad_class_flag .    '      ' );
+
+$ddd = count(array_intersect($array4, $array5));
+
+fwrite($myfile, '    secon  '   . (string)$ddd .    '      ' );
+
+if($undergrad_class_flag == count(array_intersect($array4, $array5))){
+        $sql = "UPDATE students
+               SET con_class = 'taken'
+               WHERE SID = $SID ";
+        mysql_query($sql);
+}
+else{
+    $sql = "UPDATE students
+           SET con_class = 'not taken'
+           WHERE SID = $SID ";
+    mysql_query($sql);
+}
+
+
+/* End of Enrollment and Condition Table */
+
+$sql = "UPDATE students
+       SET passing_status = 'Passing'
+       WHERE SID = $SID";
+mysql_query($sql);
+
+
+$sql = "SELECT *
+        FROM students
+        WHERE SID = $SID";
+
+$result = mysql_query($sql) or die(mysql_error());
+$reason = " ";
+
+while ($row = mysql_fetch_array($result)){
+
+    if($row["cumulative_credit"] < 30){
+        $passing_status = 0;
+        fwrite($myfile, ' '   . (string)$row["cumulative_credit"] .    '  ' );
+        $sql = "UPDATE students
+               SET passing_status = 'Not Passing'
+               WHERE SID = $SID";
+        mysql_query($sql);
+
+        $reason =  $reason . "cumulative credit less than 30, ";
+    }
+    if($row["algorithm"] == "Have not taken"){
+        $passing_status = 0;
+        fwrite($myfile, ' '   . (string)$row["cumulative_credit"] .    '  ' );
+        $sql = "UPDATE students
+               SET passing_status = 'Not Passing'
+               WHERE SID = $SID";
+        mysql_query($sql);
+        $reason = $reason . "haven't taken algorithm, ";
+    }
+
+    if($row["core_courses_credits"] < 12){
+        $passing_status = 0;
+        fwrite($myfile, ' '   . (string)$row["core_courses_credits"] . '  ' );
+        $sql = "UPDATE students
+               SET passing_status = 'Not Passing'
+               WHERE SID = $SID";
+        mysql_query($sql);
+        $reason = $reason . "core courses less than 12 credits, ";
+    }
+
+    if($row["elective_courses_credits"] < 18){
+         $passing_status = 0;
+         fwrite($myfile, ' '   . (string)$row["elective_courses_credits"] .  '  ' );
+         $sql = "UPDATE students
+                SET passing_status = 'Not Passing'
+                WHERE SID = $SID";
+         mysql_query($sql);
+         $reason = $reason . "elective courses less than 18 credits, ";
+    }
+
+    if($row["grade_below_B"] == 0){
+         $passing_status = 0;
+         fwrite($myfile, ' '   . (string)$row["grade_below_B"] .  '  ' );
+         $sql = "UPDATE students
+                SET passing_status = 'Not Passing'
+                WHERE SID = $SID";
+         mysql_query($sql);
+         $reason = $reason . "More than 2 grades below a B, ";
+    }
+
+    if($row["con_class"] == "not taken"){
+          $passing_status = 0;
+          fwrite($myfile, ' '   . (string)$row["con_class"] .   '  ' );
+          $sql = "UPDATE students
+                 SET passing_status = 'Not Passing'
+                 WHERE SID = $SID";
+          mysql_query($sql);
+          $reason = $reason . "Condition class have not been taken";
+    }
+
+}
+
+
+fwrite($myfile, 'Reason:'. $reason);
+
+$sql = "UPDATE students
+        SET reason = '$reason'
+        WHERE SID = $SID";
+mysql_query($sql);
 
 mysql_close($conn);
+fclose($myfile);
 ?>
