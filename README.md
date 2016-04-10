@@ -1,5 +1,3 @@
-<snippet>
-  <content><![CDATA[
 # Database-II-Project-MySQL-PHP-AngularJS-Ionic
 
 TODO: Write a project description
@@ -31,6 +29,4 @@ TODO: Write credits
 ## License
 
 TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+
