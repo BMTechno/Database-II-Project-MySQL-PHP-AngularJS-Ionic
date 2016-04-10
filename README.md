@@ -77,7 +77,7 @@ TODO: Write history
 
 ## Credits
 
-TODO: Write credits
+Author: Son Nguyen & Vivien Chow
 
 ## License
 
