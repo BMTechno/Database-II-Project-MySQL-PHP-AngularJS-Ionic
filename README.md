@@ -7,7 +7,7 @@ TODO: Write a project description
 #### Ionic Cordova Android/iOS
 ##### Installation instructions excerpt from: http://ionicframework.com/getting-started/
 
-1. Install Node.js 4 (Node 5 does not work at the moment!):   `https://nodejs.org/en/download/`
+1. Install Node.js 4 (Node 5 does not work at the moment!):   https://nodejs.org/en/download/
 2. Install the latest Cordova and Ionic command-line tools:   `$ npm install -g cordova ionic`
 3. Download the latest Android and iOS platform to install required platform dependencies. Follow the Android and iOS         platform guides to install required platform dependencies.
     * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
@@ -25,12 +25,21 @@ If you're running on a 64 bit machine, the Android SDK & emulator also needs som
 
 
 ## Usage
+1. Replace the XAMPP directory 'htdocs' with github 'htdocs'. 
 1. Start XAMPP servers in the XAMPP controller panel: https://www.youtube.com/watch?v=h6DEDm7C37A
-2. Start an Ionic project: http://ionicframework.com/getting-started/
-3. Create and start Android or iOS emulator. 
+2. Create and start Android or iOS emulator. 
     * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
     * iOS: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
-4. Open Ionic project directory, 
+3. Open myApp directory to check if it is missing Ionic and Cordova dependicies then type the following:
+   For Android:
+    * `$ ionic platform add android`
+    * `$ ionic build android`
+   For iOS:
+    * `$ ionic platform add ios`
+    * `$ ionic build ios`
+5. Compile and Run the App in the emulator 
+   * Android: `$ ionic emulate android`
+   * iOS: `$ ionic emulate ios`
 
 
 TODO: Write usage instructions
