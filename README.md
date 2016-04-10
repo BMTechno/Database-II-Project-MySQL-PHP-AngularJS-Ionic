@@ -74,10 +74,6 @@ Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
-
-TODO: Write history
-
 ## Credits
 
 Author: Son Nguyen & Vivien Chow
