@@ -2,7 +2,7 @@
 
 TODO: Write a project description
 
-IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowleges of SQL Admin or XAMPP are needed.  
+IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Admin or XAMPP are needed.  
 
 ## Installation
 
