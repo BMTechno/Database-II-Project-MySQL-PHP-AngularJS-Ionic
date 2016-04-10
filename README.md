@@ -8,7 +8,7 @@ TODO: Write a project description
 ##### Installation instructions excerpt from: http://ionicframework.com/getting-started/
 
 1. Install Node.js 4 (Node 5 does not work at the moment!):   https://nodejs.org/en/download/
-2. Install the latest Cordova and Ionic command-line tools:   $ npm install -g cordova ionic
+2. Install the latest Cordova and Ionic command-line tools:   `$ npm install -g cordova ionic`
 3. Download the latest Android and iOS platform to install required platform dependencies. Follow the Android and iOS         platform guides to install required platform dependencies.
     * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
     * iOS: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
@@ -21,7 +21,7 @@ TODO: Write a project description
 ######Debian/Ubuntu:
 If you're running on a 64 bit machine, the Android SDK & emulator also needs some 32 bit libraries:
 
-* sudo apt-get update; sudo apt-get install --yes lib32z1 lib32stdc++6
+* `sudo apt-get update; sudo apt-get install --yes lib32z1 lib32stdc++6`
 
 
 ## Usage
