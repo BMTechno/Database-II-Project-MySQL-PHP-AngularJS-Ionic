@@ -1,7 +1,7 @@
 # Database-II-Project-MySQL-PHP-AngularJS-Ionic-Cordova
 
 Description: Making an Android App connecting to a MySQL server using Ionic.js and Cordova. 
-             This is a project sequence for my [Database II](http://www.cs.uml.edu/~cchen/310-S16/index.html) class at Umass Lowell. 
+             This is a project sequence for my [Database II](http://www.cs.uml.edu/~cchen/310-S16/index.html) class at [Umass Lowell](http://www.uml.edu/). 
 
 IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Admin or XAMPP are needed.  
 
@@ -17,7 +17,7 @@ IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Ad
     * [iOS](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html)
 
 #### XAMPP (PHP + MySQL server) 
-1. Download XAMPP installer: https://www.apachefriends.org/download.html
+* Download XAMPP installer: https://www.apachefriends.org/download.html
 
 #### Important 32 bit libaries 
 
@@ -25,7 +25,6 @@ IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Ad
 If you're running on a 64 bit machine, the Android SDK & emulator also needs some 32 bit libraries:
 
 * `sudo apt-get update; sudo apt-get install --yes lib32z1 lib32stdc++6`
-
 
 ## Usage
 
