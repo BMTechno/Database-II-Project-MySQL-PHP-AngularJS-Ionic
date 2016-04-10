@@ -62,6 +62,10 @@ Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
    * Android: `$ ionic emulate android`
    * iOS: `$ ionic emulate ios`
 
+#### Run on Desktop
+* Change all IP address for $http POST && GET request in the Angular controller from Android(10.0.2.2) to 127.0.0.1
+* In the terminal direct to myApp's directory and type the following command to run on Desktop: `$ ionic serve` 
+
 ## Contributing
 
 1. Fork it!
