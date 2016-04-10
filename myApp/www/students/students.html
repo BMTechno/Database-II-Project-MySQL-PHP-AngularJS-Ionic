@@ -1,0 +1,31 @@
+<ion-view view-title="Students">
+  <ion-content>
+
+    <div ng-controller="studentsCtrl">
+      <form method="post">
+        <div class="list">
+          <label class="item item-input">
+            <input type="text" ng-model="SID" placeholder="SID">
+          </label>
+        </div>
+
+        <div class="padding">
+          <input class="button button-block button-positive activated" value="submit" ng-click="getGPA()"/>
+        </div>
+      </form>
+      <p>
+        Student Status
+      </p>
+      <div ng-repeat="x in SID_and_GPA">
+        <p>Student ID: {{x.SID }}</P>
+        <p>GPA: {{x.GPA}}</P>
+        <p>Total Credits: {{x.cumulative_credit}}</p>
+        <p>Academic Status: {{x.passing_status}}</p>
+        <p>Reason: {{x.reason}}</p>
+      </div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>
