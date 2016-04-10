@@ -2,6 +2,8 @@
 
 TODO: Write a project description
 
+IMPORTANT NOTE: This guide only work for iOS and Linux.
+
 ## Installation
 
 #### Ionic Cordova Android/iOS
