@@ -2,7 +2,7 @@
 
 TODO: Write a project description
 
-IMPORTANT NOTE: This guide only work for iOS and Linux.
+IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowleges of SQL Admin or XAMPP are needed.  
 
 ## Installation
 
@@ -27,8 +27,21 @@ If you're running on a 64 bit machine, the Android SDK & emulator also needs som
 
 
 ## Usage
+
+#### PHP + MySQL
 1. Replace the XAMPP directory 'htdocs' with github 'htdocs'. 
-1. Start XAMPP servers in the controller panel: https://www.youtube.com/watch?v=h6DEDm7C37A
+2. Start XAMPP servers in the controller panel: https://www.youtube.com/watch?v=h6DEDm7C37A
+3. In the web browser go to the url http://localhost/phpmyadmin/ or http://127.0.0.1/phpmyadmin/
+4. Create or set Tables for the Database
+5. Setting Privilege and Creating a User
+   *Click on the Privileges tab at the top of the page to view a list of user accounts
+   *Click on the Add a new User link at the bottom of the page
+   *In the Login Information section, change the following settings:
+   *Type a user name in the second field of the User name row
+   *Click on the drop-down menu next to Host to select localhost in the second field
+      *Type the password in Password and Re-type fields.
+      *In the Global Privileges, click on the Check All link at the top of the screen to select all of the checkboxes for Data, Structure, and Administration sections
+
 2. Create, configure and start Android or iOS emulator. 
     * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
     * iOS: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
