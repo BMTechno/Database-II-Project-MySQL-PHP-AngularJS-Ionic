@@ -1,7 +1,7 @@
 # Database-II-Project-MySQL-PHP-AngularJS-Ionic-Cordova
 
 Description: Making an Android App connecting to a MySQL server using Ionic.js and Cordova. 
-             This is a project sequence for my Database II class at Umass Lowell. http://www.cs.uml.edu/~cchen/310-S16/index.html
+             This is a project sequence for my [Database II](http://www.cs.uml.edu/~cchen/310-S16/index.html) class at Umass Lowell. 
 
 IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Admin or XAMPP are needed.  
 
@@ -13,8 +13,8 @@ IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Ad
 1. Install Node.js 4 (Node 5 does not work at the moment!):   https://nodejs.org/en/download/
 2. Install the latest Cordova and Ionic command-line tools:   `$ npm install -g cordova ionic`
 3. Download the latest Android and iOS platform to install required platform dependencies. Follow the Android and iOS         platform guides to install required platform dependencies.
-    * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
-    * iOS: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
+    * [Android](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html)
+    * [iOS](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html)
 
 #### XAMPP (PHP + MySQL server) 
 1. Download XAMPP installer: https://www.apachefriends.org/download.html
@@ -50,8 +50,8 @@ Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
 #### Cordova + Android + Ionic/Angularjs
 
 1. Create, configure and start Android or iOS emulator. 
-    * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
-    * iOS: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
+    * [Android](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html)
+    * [iOS](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html)
 2. Open myApp directory to check if it is missing Ionic and Cordova dependicies then type the following:
     * For Android:
       * `$ ionic platform add android`
@@ -81,5 +81,5 @@ TODO: Write credits
 
 ## License
 
-TODO: Write license
+The content of this project itself is licensed under the [Creative Commons Attribution 3.0 license](http://creativecommons.org/licenses/by/3.0/us/deed.en_US), and the underlying source code used to format and display that content is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
 
