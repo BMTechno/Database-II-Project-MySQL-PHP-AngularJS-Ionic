@@ -27,7 +27,7 @@ If you're running on a 64 bit machine, the Android SDK & emulator also needs som
 ## Usage
 1. Replace the XAMPP directory 'htdocs' with github 'htdocs'. 
 1. Start XAMPP servers in the controller panel: https://www.youtube.com/watch?v=h6DEDm7C37A
-2. Create and start Android or iOS emulator. 
+2. Create, configure and start Android or iOS emulator. 
     * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
     * iOS: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
 3. Open myApp directory to check if it is missing Ionic and Cordova dependicies then type the following:
