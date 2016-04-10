@@ -1,7 +1,6 @@
-Database-II-Project-MySQL-PHP-AngularJS-Ionic
 <snippet>
   <content><![CDATA[
-# ${1:Project Name}
+# Database-II-Project-MySQL-PHP-AngularJS-Ionic
 
 TODO: Write a project description
 
