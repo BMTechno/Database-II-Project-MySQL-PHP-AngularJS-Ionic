@@ -44,7 +44,7 @@ Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
       * Type the password in Password and Re-type fields.
       * In the Global Privileges, click on the Check All link at the top of the screen to select all of the checkboxes for Data, Structure, and Administration sections
       
-6. In htdocs/server, change all PHP files server, user, password and database name corresponding to step 5.  
+6. In htdocs/server, inside all PHP files change server, user, password and database name corresponding to step 5.  
 
 #### Cordova + Android + Ionic/Angularjs
 
