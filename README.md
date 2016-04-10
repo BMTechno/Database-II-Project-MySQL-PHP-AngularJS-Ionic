@@ -29,6 +29,8 @@ If you're running on a 64 bit machine, the Android SDK & emulator also needs som
 ## Usage
 
 #### PHP + MySQL
+Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
+
 1. Replace the XAMPP directory 'htdocs' with github 'htdocs'. 
 2. Start XAMPP servers in the controller panel: https://www.youtube.com/watch?v=h6DEDm7C37A
 3. In the web browser go to the url http://localhost/phpmyadmin/ or http://127.0.0.1/phpmyadmin/
@@ -42,17 +44,19 @@ If you're running on a 64 bit machine, the Android SDK & emulator also needs som
       * Type the password in Password and Re-type fields.
       * In the Global Privileges, click on the Check All link at the top of the screen to select all of the checkboxes for Data, Structure, and Administration sections
 
-2. Create, configure and start Android or iOS emulator. 
+#### Cordova + Android + Ionic/Angularjs
+
+1. Create, configure and start Android or iOS emulator. 
     * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
     * iOS: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
-3. Open myApp directory to check if it is missing Ionic and Cordova dependicies then type the following:
+2. Open myApp directory to check if it is missing Ionic and Cordova dependicies then type the following:
     * For Android:
       * `$ ionic platform add android`
       * `$ ionic build android`
     * For iOS:
       * `$ ionic platform add ios`
       * `$ ionic build ios`
-5. Compile and Run the App in the emulator 
+3. Compile and Run the App in the emulator 
    * Android: `$ ionic emulate android`
    * iOS: `$ ionic emulate ios`
 
