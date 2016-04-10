@@ -1,6 +1,7 @@
 # Database-II-Project-MySQL-PHP-AngularJS-Ionic-Cordova
 
-TODO: Write a project description
+Description: Making an Android App connecting to a MySQL server using Ionic.js and Cordova. 
+             This is a project sequence for my Database II class at Umass Lowell. http://www.cs.uml.edu/~cchen/310-S16/index.html
 
 IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Admin or XAMPP are needed.  
 
