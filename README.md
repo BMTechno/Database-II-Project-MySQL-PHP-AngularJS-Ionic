@@ -31,12 +31,12 @@ If you're running on a 64 bit machine, the Android SDK & emulator also needs som
     * Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
     * iOS: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
 3. Open myApp directory to check if it is missing Ionic and Cordova dependicies then type the following:
-   For Android:
-    * `$ ionic platform add android`
-    * `$ ionic build android`
-   For iOS:
-    * `$ ionic platform add ios`
-    * `$ ionic build ios`
+    * For Android:
+      ** `$ ionic platform add android`
+      ** `$ ionic build android`
+    * For iOS:
+      ** `$ ionic platform add ios`
+      ** `$ ionic build ios`
 5. Compile and Run the App in the emulator 
    * Android: `$ ionic emulate android`
    * iOS: `$ ionic emulate ios`
