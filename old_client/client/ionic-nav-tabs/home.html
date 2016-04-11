@@ -1,0 +1,46 @@
+<ion-view view-title="Home">
+    </ion-nav-buttons>
+    <ion-content>
+        <div ng-controller="studentController">
+            <div class="list">
+
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="text" placeholder="Search" ng-model="search">
+                    </label>
+                </div>
+
+                <div ng-repeat="x in model_object | filter:search "  class="item row">
+                    <p class="col">{{ x.SID }}</p>
+                    <p class="col">{{ x.name }}</p>
+                    <p class="col">{{ x.IID }}</p>
+                    <p class="col">{{ x.degreeHeld }}</p>
+                    <p class="col">{{ x.major }}</p>
+                    <p class="col">{{ x.career }}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>
+                    <a class="button icon icon-right ion-chevron-right" href="#/tab/insert-student">insert student</a>
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    <a class="button icon icon-right ion-chevron-right" href="#/tab/update-student">update student</a>
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    <a class="button icon icon-right ion-chevron-right" href="#/tab/delete-student">delete student</a>
+                </p>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

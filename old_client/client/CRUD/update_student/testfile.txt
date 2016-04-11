@@ -1,0 +1,4 @@
+1234567 1 testing
+UPDATE students
+        SET IID = 1, major = 'testing'
+        WHERE SID = 1234567 

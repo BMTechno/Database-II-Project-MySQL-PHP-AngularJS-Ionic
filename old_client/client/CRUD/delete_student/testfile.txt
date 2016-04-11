@@ -1,0 +1,2 @@
+DELETE from students
+        WHERE SID = 7777777 
