@@ -1,3 +1,0 @@
-7777777 eqe 1 e23e23 3e23e wwerwer
-INSERT INTO `students` (`SID`, `name`, `IID`, `major`, `degreeHeld`, `career`) VALUES
-        (7777777, 'eqe',1, 'e23e23', '3e23e', 'wwerwer')
