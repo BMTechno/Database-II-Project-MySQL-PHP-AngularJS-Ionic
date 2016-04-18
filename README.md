@@ -3,7 +3,7 @@
 Description: Making an Android App connecting to a MySQL server using Ionic.js and Cordova. 
              This is a project sequence for my [Database II](http://www.cs.uml.edu/~cchen/310-S16/index.html) class at [Umass Lowell](http://www.uml.edu/). 
 
-IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Admin or XAMPP are needed.  
+IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Admin or XAMPP are needed. THIS PROJECT IS RUNNING BUT NOT COMPLETED!!!  
 
 ## Installation
 
