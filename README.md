@@ -45,6 +45,7 @@ Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
       * In the Global Privileges, click on the Check All link at the top of the screen to select all of the checkboxes for Data, Structure, and Administration sections
       
 6. In htdocs/server, inside all PHP files change server, user, password and database name corresponding to step 5.  
+7. Execute htdocs/SQL in PHPMyAdmin.  
 
 #### Cordova + Android + Ionic/Angularjs
 
