@@ -34,6 +34,8 @@ Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
 1. Replace the XAMPP directory 'htdocs' with github 'htdocs'. 
 2. Start XAMPP servers in the controller panel: https://www.youtube.com/watch?v=h6DEDm7C37A
 3. In the web browser go to the url `http://localhost/phpmyadmin/` or http://127.0.0.1/phpmyadmin/
+   *If trying to run the Android simulator.
+   *Change to the local IP address for all http request from `127.0.0.1` to `10.0.2.2` in myApp/www/js/controllers.js.
 4. Create or set Tables for the Database
 5. Setting Privilege and Creating a User
    * Click on the Privileges tab at the top of the page to view a list of user accounts
