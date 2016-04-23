@@ -3,7 +3,7 @@
 Description: Making an Android App connecting to a MySQL server using Ionic.js and Cordova. 
              This is a project sequence for my [Database II](http://www.cs.uml.edu/~cchen/310-S16/index.html) class at [Umass Lowell](http://www.uml.edu/). 
 
-IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Admin or XAMPP are needed.  
+IMPORTANT NOTE: This guide only work for iOS and Linux. Basic knowlege of SQL Admin or XAMPP are needed. THIS PROJECT IS RUNNING BUT NOT COMPLETED!!!  
 
 ## Installation
 
@@ -34,6 +34,8 @@ Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
 1. Replace the XAMPP directory 'htdocs' with github 'htdocs'. 
 2. Start XAMPP servers in the controller panel: https://www.youtube.com/watch?v=h6DEDm7C37A
 3. In the web browser go to the url `http://localhost/phpmyadmin/` or http://127.0.0.1/phpmyadmin/
+   * If trying to run the app on the Android simulator.
+   * Change to the local IP address for all http request from `127.0.0.1` to `10.0.2.2` in myApp/www/js/controllers.js.
 4. Create or set Tables for the Database
 5. Setting Privilege and Creating a User
    * Click on the Privileges tab at the top of the page to view a list of user accounts
@@ -45,6 +47,7 @@ Instructions excerpt from: http://www.cs.uml.edu/~cchen/310-S16/index.html
       * In the Global Privileges, click on the Check All link at the top of the screen to select all of the checkboxes for Data, Structure, and Administration sections
       
 6. In htdocs/server, inside all PHP files change server, user, password and database name corresponding to step 5.  
+7. Execute htdocs/SQL in PHPMyAdmin.  
 
 #### Cordova + Android + Ionic/Angularjs
 
