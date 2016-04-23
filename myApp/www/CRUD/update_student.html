@@ -1,0 +1,21 @@
+<ion-view view-title="Update Students" >
+  <ion-content class="padding" ng-controller="updateStudentCtrl">
+    <form>
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" ng-model="SID" placeholder="SID">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="IID" placeholder="IID">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="major" placeholder="major">
+        </label>
+      </div>
+      <a class="button button-block button-positive" href="#/app/read_student" ng-click="updateStudent()">
+        Submit
+      </a>
+    </form>
+
+  </ion-content>
+</ion-view>

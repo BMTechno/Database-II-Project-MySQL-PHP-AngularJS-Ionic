@@ -1,0 +1,14 @@
+<ion-view view-title="Delete Students" >
+  <ion-content class="padding" ng-controller="deleteStudentCtrl">
+
+    <form>
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" ng-model="SID" placeholder="SID">
+        </label>
+      </div>
+        <a class="button button-block button-positive" href="#/app/read_student" ng-click="deleteStudent()">Submit</a>
+    </form>
+
+  </ion-content>
+</ion-view>

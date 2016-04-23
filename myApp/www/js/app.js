@@ -68,16 +68,52 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-  .state('app.students', {
-    url: '/students',
+  .state('app.academic_status', {
+    url: '/academic_status',
     views: {
       'menuContent': {
-        templateUrl: 'students/students.html',
-        controller: 'studentsCtrl'
+        templateUrl: 'students/academic_status.html',
+        controller: 'academicCtrl'
+      }
+    }
+  })
+  .state('app.read_student', {
+    url: '/read_student',
+    views: {
+      'menuContent': {
+        templateUrl: 'CRUD/read_student.html',
+        controller: 'readStudentController'
+      }
+    }
+  })
+  .state('app.create_student', {
+    url: '/create_student',
+    views: {
+      'menuContent': {
+        templateUrl: 'CRUD/create_student.html'
+        //controller: 'addStudentCtrl'
+      }
+    }
+  })
+  .state('app.update_student', {
+    url: '/update_student',
+    views: {
+      'menuContent': {
+        templateUrl: 'CRUD/update_student.html',
+        controller: 'updateStudentCtrl'
+      }
+    }
+  })
+  .state('app.delete_student', {
+    url: '/delete_student',
+    views: {
+      'menuContent': {
+        templateUrl: 'CRUD/delete_student.html',
+        controller: 'deleteStudentCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/academic_status');
 });

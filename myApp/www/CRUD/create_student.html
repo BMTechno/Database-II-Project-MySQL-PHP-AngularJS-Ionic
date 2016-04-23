@@ -1,0 +1,29 @@
+<ion-view view-title="Create Students" >
+  <ion-content class="padding" ng-controller="addStudentCtrl">
+
+    <form method="post">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" ng-model="SID" placeholder="SID">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="name" placeholder="name">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="IID" placeholder="IID">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="major" placeholder="major">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="degreeHeld" placeholder="degreeHeld">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="career" placeholder="career">
+        </label>
+      </div>
+      <a class="button button-block button-positive" href="#/app/read_student" ng-click="addStudent()">Submit</a>
+    </form>
+
+  </ion-content>
+</ion-view>

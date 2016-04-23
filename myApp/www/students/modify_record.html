@@ -1,0 +1,21 @@
+<ion-view view-title="Students" ng-controller="">
+
+  <ion-content>
+
+    <div>
+      <ion-list>
+        <ion-item ng-repeat="x in model_object">
+          <div class="row">
+            <div class="col">{{ x.SID }}</div>
+            <div class="col">{{ x.name}}</div>
+            <div class="col">{{ x.IID}}</div>
+            <div class="col">{{ x.major }}</div>
+            <div class="col">{{ x.degreeHeld}}</div>
+            <div class="col">{{ x.career }}</div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </ion-content>
+</ion-view>
