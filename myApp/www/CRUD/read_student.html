@@ -15,24 +15,28 @@
         <input type="text" placeholder="Search" ng-model="searchItem">
       </label>
 
-      <ion-item>
-        <div class="row">
-          <div class="col">SID</div>
-          <div class="col">name</div>
-          <div class="col">IID</div>
-          <div class="col">major</div>
-          <div class="col">degreeHeld</div>
-          <div class="col">career</div>
-        </div>
-      </ion-item>
+      <!--<ion-item>-->
+        <!--<div class="row">-->
+          <!--<div class="col">SID</div>-->
+          <!--<div class="col">name</div>-->
+          <!--<div class="col">IID</div>-->
+          <!--<div class="col">major</div>-->
+          <!--<div class="col">degreeHeld</div>-->
+          <!--<div class="col">career</div>-->
+        <!--</div>-->
+      <!--</ion-item>-->
       <ion-item ng-repeat="x in model_object | filter: searchItem">
         <div class="row">
-          <div class="col">{{ x.SID }}</div>
-          <div class="col">{{ x.name}}</div>
-          <div class="col">{{ x.IID}}</div>
-          <div class="col">{{ x.major }}</div>
-          <div class="col">{{ x.degreeHeld}}</div>
-          <div class="col">{{ x.career }}</div>
+          <div class="col">SID: {{ x.SID }}<br>
+                           name: {{ x.name}}<br>
+                           IID: {{ x.IID }}
+          </div>
+          <div class="col">
+                           major: {{ x.major }}<br>
+                           degreeHeld: {{ x.degreeHeld}}<br>
+                           career: {{ x.career }}
+          </div>
+
         </div>
       </ion-item>
     </ion-list>

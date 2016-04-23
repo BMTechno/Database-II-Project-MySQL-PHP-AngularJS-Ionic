@@ -25,11 +25,18 @@ ion-side-menus{
 
     ion-nav-view{
       ion-content{
-        //background: url("../img/hawk.jpg");
-        //backgrond-size: auto;
-        //background-repeat: no-repeat;
-        //
-        //color: white;
+
+        ion-list{
+          ion-item{
+            div.row{
+              div.col.no-overflow{
+                overflow: hidden;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+
       }
     }
   }

@@ -73,12 +73,12 @@ angular.module('starter.controllers', [])
   $scope.getGPA = function(){
     console.log($scope.SID);
     //10.0.2.2 is the localhost ip address for android emulator. 127.0.0.1(localhost) is the ip for desktop localhost
-    $http.post("http://127.0.0.1/server/students/student_academic_status/post_SID_to_get_student_status.php",
+    $http.post("http://10.0.2.2/server/students/student_academic_status/post_SID_to_get_student_status.php",
       {
         'SID':$scope.SID
       })
       .success(function(data){
-        $http.get('http://127.0.0.1/server/students/list_of_students/list_of_students.php').then(function (response) {
+        $http.get('http://10.0.2.2/server/students/list_of_students/list_of_students.php').then(function (response) {
           $scope.model_object = response.data.records;
           console.log($scope.model_object);
 
@@ -110,7 +110,7 @@ angular.module('starter.controllers', [])
 .controller('addStudentCtrl', function($scope, $http, $ionicHistory){
 
   $scope.addStudent = function(){
-    $http.post("http://127.0.0.1/server/CRUD/insert_student.php",
+    $http.post("http://10.0.2.2/server/CRUD/insert_student.php",
       {
         'SID':$scope.SID, 'name':$scope.name,
         'IID':$scope.IID, 'major':$scope.major,
@@ -127,7 +127,7 @@ angular.module('starter.controllers', [])
 })
 .controller('readStudentController', function($scope, $http, $interval) {
 
-  $http.get("http://127.0.0.1/server/students/list_of_students/list_of_students.php")
+  $http.get("http://10.0.2.2/server/students/list_of_students/list_of_students.php")
     .then(function (response) {
       $scope.model_object = response.data.records;
     });
@@ -135,7 +135,7 @@ angular.module('starter.controllers', [])
 
   // I think this is very bad practice...but this is brute force to refresh model.
   $interval(function(){
-    $http.get("http://127.0.0.1/server/students/list_of_students/list_of_students.php")
+    $http.get("http://10.0.2.2/server/students/list_of_students/list_of_students.php")
       .then(function (response) {
         $scope.model_object = response.data.records;
       });
@@ -145,7 +145,7 @@ angular.module('starter.controllers', [])
 .controller('updateStudentCtrl', function($scope, $http, $ionicHistory) {
 
   $scope.updateStudent = function(){
-    $http.post("http://127.0.0.1/server/CRUD/update_student.php",
+    $http.post("http://10.0.2.2/server/CRUD/update_student.php",
       {
         'SID':$scope.SID,
         'IID':$scope.IID,
@@ -160,7 +160,7 @@ angular.module('starter.controllers', [])
 .controller('deleteStudentCtrl', function($scope, $http, $ionicHistory) {
 
   $scope.deleteStudent = function(){
-    $http.post("http://127.0.0.1/server/CRUD/delete_student.php",
+    $http.post("http://10.0.2.2/server/CRUD/delete_student.php",
       {
         'SID':$scope.SID
       })
