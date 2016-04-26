@@ -7,7 +7,6 @@
       <div class="col"><a class="button button-block button-positive" href="#/app/delete_student">Delete</a></div>
     </div>
 
-
     <ion-list>
 
       <label class="item item-input">
@@ -15,30 +14,21 @@
         <input type="text" placeholder="Search" ng-model="searchItem">
       </label>
 
-      <!--<ion-item>-->
-        <!--<div class="row">-->
-          <!--<div class="col">SID</div>-->
-          <!--<div class="col">name</div>-->
-          <!--<div class="col">IID</div>-->
-          <!--<div class="col">major</div>-->
-          <!--<div class="col">degreeHeld</div>-->
-          <!--<div class="col">career</div>-->
-        <!--</div>-->
-      <!--</ion-item>-->
       <ion-item ng-repeat="x in model_object | filter: searchItem">
         <div class="row">
-          <div class="col">SID: {{ x.SID }}<br>
-                           name: {{ x.name}}<br>
-                           IID: {{ x.IID }}
+          <div class="col">
+            SID: {{ x.SID }}<br>
+            name: {{ x.name}}<br>
+            IID: {{ x.IID }}
           </div>
           <div class="col">
-                           major: {{ x.major }}<br>
-                           degreeHeld: {{ x.degreeHeld}}<br>
-                           career: {{ x.career }}
+            major: {{ x.major }}<br>
+            degreeHeld: {{ x.degreeHeld}}<br>
+            career: {{ x.career }}
           </div>
-
         </div>
       </ion-item>
+
     </ion-list>
 
   </ion-content>

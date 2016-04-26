@@ -1,0 +1,35 @@
+<ion-view view-title="Students">
+  <ion-content ng-controller="readStudentController">
+
+    <div class="row">
+      <div class="col"><a class="button button-block button-positive" href="#/app/create_student">Create</a></div>
+      <div class="col"><a class="button button-block button-positive" href="#/app/update_student">Update</a></div>
+      <div class="col"><a class="button button-block button-positive" href="#/app/delete_student">Delete</a></div>
+    </div>
+    
+    <ion-list>
+
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="searchItem">
+      </label>
+
+      <ion-item ng-repeat="x in model_object | filter: searchItem">
+        <div class="row">
+          <div class="col">
+            SID: {{ x.SID }}<br>
+            name: {{ x.name}}<br>
+            IID: {{ x.IID }}
+          </div>
+          <div class="col">
+            major: {{ x.major }}<br>
+            degreeHeld: {{ x.degreeHeld}}<br>
+            career: {{ x.career }}
+          </div>
+        </div>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>
