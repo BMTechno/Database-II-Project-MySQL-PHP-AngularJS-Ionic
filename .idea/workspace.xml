@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6300772-34a0-4b9d-8a82-0967e39c752e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Database-II-Project-MySQL-PHP-AngularJS-Ionic.iml" afterPath="$PROJECT_DIR$/.idea/Database-II-Project-MySQL-PHP-AngularJS-Ionic.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/scss/ionic.app.scss" afterPath="$PROJECT_DIR$/myApp/scss/ionic.app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/www/CRUD/read_student.html" afterPath="$PROJECT_DIR$/myApp/www/CRUD/read_student.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/myApp/www/css/ionic.app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/myApp/www/css/ionic.app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/www/js/app.js" afterPath="$PROJECT_DIR$/myApp/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/www/js/controllers.js" afterPath="$PROJECT_DIR$/myApp/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/www/templates/menu.html" afterPath="$PROJECT_DIR$/myApp/www/templates/menu.html" />
     </list>
     <ignored path="Database-II-Project-MySQL-PHP-AngularJS-Ionic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -227,14 +219,15 @@
       <workItem from="1461430610973" duration="1813000" />
       <workItem from="1461461665795" duration="1079000" />
       <workItem from="1461464324253" duration="742000" />
+      <workItem from="1461682729538" duration="913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32979000" />
+    <option name="totallyTimeSpent" value="33892000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="7" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16040689" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -271,6 +264,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/myApp/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myApp/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
